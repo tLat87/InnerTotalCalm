@@ -54,12 +54,12 @@ export default function SettingsScreen() {
                 </View>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.settingItem}>
-                <View style={styles.iconLabel}>
-                    <Image source={require('../assets/img/Frame12-4.png')} />
-                    <Text style={styles.label}>Terms of Use / Privacy Policy</Text>
-                </View>
-            </TouchableOpacity>
+            {/*<TouchableOpacity style={styles.settingItem}>*/}
+            {/*    <View style={styles.iconLabel}>*/}
+            {/*        <Image source={require('../assets/img/Frame12-4.png')} />*/}
+            {/*        <Text style={styles.label}>Terms of Use / Privacy Policy</Text>*/}
+            {/*    </View>*/}
+            {/*</TouchableOpacity>*/}
         </View>
     );
 }
