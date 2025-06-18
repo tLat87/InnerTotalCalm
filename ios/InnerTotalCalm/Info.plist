@@ -47,5 +47,37 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSCameraUsageDescription</key>
+    <string>We need access to your camera to take photos.</string>
+
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>We need access to your photo library to select images.</string>
+
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>We need permission to save photos to your photo library.</string>
+
+    <key>NSMicrophoneUsageDescription</key>
+    <string>We need access to your microphone to record audio.</string>
+
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>We need your location to show your position on the map.</string>
+
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>We use your location for better map and navigation features.</string>
+
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>We need your location to run location features in the background.</string>
+
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>whatsapp</string>
+        <string>instagram</string>
+        <string>facebook</string>
+        <string>fb</string>
+        <string>twitter</string>
+        <string>tg</string>
+        <string>mailto</string>
+    </array>
+
 </dict>
 </plist>
