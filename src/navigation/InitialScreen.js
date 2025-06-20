@@ -11,8 +11,6 @@ export default function InitialScreen({navigation}) {
                     resizeMode="contain"
                 />
             </View>
-
-            {/* Текстовый блок */}
             <View style={styles.card}>
                 <Text style={styles.title}>WELCOME TO INNER TOTAL CALM</Text>
                 <Text style={styles.subtitle}>
@@ -30,11 +28,11 @@ export default function InitialScreen({navigation}) {
     );
 }
 
-// Стили
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#0a0a3c', // Тёмно-синий фон
+        backgroundColor: '#0a0a3c',
         justifyContent: 'space-between',
         paddingVertical: 40,
     },
@@ -42,7 +40,6 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        // Тут можно добавить картинку или SVG
     },
     card: {
         backgroundColor: '#181867',

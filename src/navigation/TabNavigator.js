@@ -5,7 +5,6 @@ import HomeScreen from '../screens/HomeScreen';
 import {useNavigation} from '@react-navigation/native';
 import TimerScreen from '../screens/TimerScreen';
 import CalendarScreen from '../screens/CalendarScreen';
-import GameScreen from '../screens/GameScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
 const Tab = createBottomTabNavigator();
@@ -16,11 +15,6 @@ const TabNavigator = () => {
         <Tab.Navigator
             screenOptions={({ route }) => ({
                 headerStyle: { backgroundColor: '#001453' },
-                // headerTitle: () => (
-                //     <Text style={{color:'#FDD72E', fontWeight: '900', fontSize: 24}}>
-                //         Walking diary
-                //     </Text>
-                // ),
                 headerTitle:"",
                 headerShadowVisible: false,
                 tabBarStyle: {
@@ -74,16 +68,16 @@ const TabNavigator = () => {
                     },
                 }}
             />
-            <Tab.Screen
-                name="GameScreen"
-                component={GameScreen}
-                options={{
-                    tabBarLabel: '',
-                    tabBarIcon: ({ focused }) => {
-                        return <Image source={require('../assets/img/Frame-4.png')} />;
-                    },
-                }}
-            />
+            {/*<Tab.Screen*/}
+            {/*    name="GameScreen"*/}
+            {/*    component={GameScreen}*/}
+            {/*    options={{*/}
+            {/*        tabBarLabel: '',*/}
+            {/*        tabBarIcon: ({ focused }) => {*/}
+            {/*            return <Image source={require('../assets/img/Frame-4.png')} />;*/}
+            {/*        },*/}
+            {/*    }}*/}
+            {/*/>*/}
             <Tab.Screen
                 name="SettingsScreen"
                 component={SettingsScreen}
