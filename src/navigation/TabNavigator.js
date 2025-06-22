@@ -16,6 +16,7 @@ const TabNavigator = () => {
             screenOptions={({ route }) => ({
                 headerStyle: { backgroundColor: '#001453' },
                 headerTitle:"",
+                headerShown: false,
                 headerShadowVisible: false,
                 tabBarStyle: {
                     position: 'absolute',

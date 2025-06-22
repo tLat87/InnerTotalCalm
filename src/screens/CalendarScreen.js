@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Image } from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {deleteReflection} from '../redux/slices/reflectionSlice';
+import Video from 'react-native-video';
 
 const CalendarScreen = ({navigation}) => {
     const days = generateLast7Days();
@@ -138,6 +139,7 @@ const generateLast7Days = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        paddingTop: 100,
         backgroundColor: '#0a1a4a',
         paddingHorizontal: 20,
         // alignItems: 'center',

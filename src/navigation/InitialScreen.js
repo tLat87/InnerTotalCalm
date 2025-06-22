@@ -1,9 +1,19 @@
 import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity, ImageBackground, Image} from 'react-native';
+import Video from 'react-native-video';
 
 export default function InitialScreen({navigation}) {
     return (
         <View style={styles.container}>
+            <Video
+                source={require('../assets/fqwf.mov')}
+                style={StyleSheet.absoluteFill}
+                resizeMode="cover"
+                repeat
+                muted
+                rate={1.0}
+                ignoreSilentSwitch="obey"
+            />
             <View style={styles.illustration}>
                 <Image
                     source={require('../assets/img/Onboardingi.png')}

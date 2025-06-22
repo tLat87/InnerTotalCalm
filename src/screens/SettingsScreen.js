@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {View, Text, StyleSheet, TouchableOpacity, Switch, Image} from 'react-native';
 import Share from 'react-native-share';
+import Video from 'react-native-video';
 
 export default function SettingsScreen() {
     const [notificationsEnabled, setNotificationsEnabled] = useState(false);
@@ -26,6 +27,16 @@ export default function SettingsScreen() {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>SETTINGS</Text>
+
+            <Video
+                source={require('../assets/fqwf.mov')}
+                style={StyleSheet.absoluteFill}
+                resizeMode="cover"
+                repeat
+                muted
+                rate={1.0}
+                ignoreSilentSwitch="obey"
+            />
 
             {/*<View style={styles.settingItem}>*/}
             {/*    <View style={styles.iconLabel}>*/}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import Video from 'react-native-video';
 
 const TimerScreen = () => {
     const [time, setTime] = useState(5); // минуты
@@ -44,6 +45,16 @@ const TimerScreen = () => {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>BREATHE IN. LET GO. THIS IS YOUR TIME</Text>
+
+            <Video
+                source={require('../assets/fqwf.mov')}
+                style={StyleSheet.absoluteFill}
+                resizeMode="cover"
+                repeat
+                muted
+                rate={1.0}
+                ignoreSilentSwitch="obey"
+            />
 
             <View style={styles.imageContainer}>
                 <Image

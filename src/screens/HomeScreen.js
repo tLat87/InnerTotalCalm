@@ -1,13 +1,22 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import Video from 'react-native-video';
 
 export default function HomeScreen({navigation}) {
     return (
         <View style={styles.container}>
 
-            {/* Картинка наверху */}
+            <Video
+                source={require('../assets/fqwf.mov')}
+                style={StyleSheet.absoluteFill}
+                resizeMode="cover"
+                repeat
+                muted
+                rate={1.0}
+                ignoreSilentSwitch="obey"
+            />
             <Image
-                source={require('../assets/img/homei.png')} // <-- сюда путь к твоей картинке с деревьями
+                source={require('../assets/img/homei.png')}
                 style={styles.topImage}
                 resizeMode="contain"
             />
@@ -51,6 +60,7 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#001453', // Тёмно-синий фон
         padding: 20,
+        paddingTop: 100,
         alignItems: 'center',
     },
     topImage: {
