@@ -135,58 +135,19 @@ const generateLast7Days = () => {
 
     return days;
 };
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: 100,
-        backgroundColor: '#0a1a4a',
+        paddingTop: 80,
+        backgroundColor: '#1a2238', // Градиентный тёмный фон
         paddingHorizontal: 20,
-        // alignItems: 'center',
-    },
-    sectionTitle: {
-        color: '#fff',
-        fontSize: 16,
-        marginBottom: 10,
-    },
-    deleteButton: {
-        flex: 1,
-        borderWidth: 1,
-        borderColor: '#fff',
-        borderRadius: 25,
-        padding: 14,
-        alignItems: 'center',
-    },
-    editButton: {
-        flex: 1,
-        backgroundColor: '#8F84FF',
-        borderRadius: 25,
-        padding: 14,
-        alignItems: 'center',
-    },
-    buttonText: {
-        color: '#fff',
-        fontWeight: '600',
-    },
-    moodBox: {
-        backgroundColor: '#2D2B6F',
-        borderRadius: 20,
-        paddingHorizontal: 14,
-        paddingVertical: 8,
-    },
-    moodText: {
-        color: '#fff',
-    },
-    moodRow: {
-        flexDirection: 'row',
-        marginBottom: 20,
-        gap: 10,
     },
     title: {
-        color: 'white',
-        fontSize: 20,
+        color: '#F4D35E',
+        fontSize: 24,
         fontWeight: 'bold',
-        marginBottom: 20,
+        marginBottom: 15,
+        textAlign: 'center',
     },
     subtitleContainer: {
         flexDirection: 'row',
@@ -196,52 +157,82 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
     subtitle: {
-        color: 'white',
+        color: '#fff',
         fontSize: 16,
+        fontStyle: 'italic',
+        flex: 1,
     },
     daysContainer: {
         flexDirection: 'row',
         marginBottom: 30,
     },
     dayItem: {
-        backgroundColor: '#3a2f87',
-        borderRadius: 10,
+        backgroundColor: '#394867',
+        borderRadius: 12,
         paddingVertical: 15,
         paddingHorizontal: 15,
         alignItems: 'center',
-        marginRight: 10,
+        marginRight: 12,
         width: 60,
     },
     activeDayItem: {
-        backgroundColor: '#a396f3',
+        backgroundColor: '#9BA4B5',
+        shadowColor: '#000',
+        shadowOpacity: 0.2,
+        shadowRadius: 4,
+        elevation: 4,
     },
     dayNumber: {
-        color: 'white',
+        color: '#fff',
         fontSize: 18,
         fontWeight: 'bold',
     },
     weekday: {
-        color: 'white',
+        color: '#cbd5e1',
         fontSize: 14,
     },
     reflectionContainer: {
-        // alignItems: 'center',
-        marginBottom: 30,
+        marginBottom: 40,
         paddingHorizontal: 10,
+        backgroundColor: '#273469',
+        borderRadius: 20,
+        padding: 20,
     },
     reflectionTitle: {
-        color: '#ffffff',
+        color: '#F4D35E',
         fontSize: 18,
         fontWeight: 'bold',
-        marginBottom: 10,
+        marginBottom: 15,
+        textAlign: 'center',
     },
     reflectionText: {
         color: '#c0c0c0',
         fontSize: 14,
         textAlign: 'center',
+        marginBottom: 20,
+    },
+    sectionTitle: {
+        color: '#F4D35E',
+        fontSize: 16,
+        marginBottom: 10,
+    },
+    moodBox: {
+        backgroundColor: '#576CBC',
+        borderRadius: 20,
+        paddingHorizontal: 14,
+        paddingVertical: 8,
+    },
+    moodText: {
+        color: '#fff',
+        fontWeight: '600',
+    },
+    moodRow: {
+        flexDirection: 'row',
+        marginBottom: 20,
+        gap: 10,
     },
     label: {
-        color: '#999',
+        color: '#C1C1C1',
         marginBottom: 4,
         fontSize: 13,
     },
@@ -250,12 +241,26 @@ const styles = StyleSheet.create({
         fontSize: 14,
         lineHeight: 20,
     },
+    deleteButton: {
+        flex: 1,
+        borderWidth: 1,
+        borderColor: '#F07167',
+        borderRadius: 25,
+        padding: 14,
+        alignItems: 'center',
+        marginTop: 20,
+    },
+    buttonText: {
+        color: '#F07167',
+        fontWeight: '600',
+    },
     addButton: {
-        backgroundColor: '#6e63d9',
+        backgroundColor: '#6D597A',
         paddingVertical: 15,
         paddingHorizontal: 40,
         alignItems: 'center',
         borderRadius: 30,
+        marginTop: 20,
     },
     addButtonText: {
         color: 'white',

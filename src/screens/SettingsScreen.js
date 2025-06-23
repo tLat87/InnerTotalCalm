@@ -3,16 +3,12 @@ import {View, Text, StyleSheet, TouchableOpacity, Switch, Image} from 'react-nat
 import Share from 'react-native-share';
 import Video from 'react-native-video';
 
-export default function SettingsScreen() {
-    const [notificationsEnabled, setNotificationsEnabled] = useState(false);
-
-    const toggleSwitch = () => setNotificationsEnabled(previousState => !previousState);
+export default function SettingsScreen({navigation}) {
 
     const handleShare = async () => {
         const shareOptions = {
             title: 'Share the app',
             message: 'Check out this amazing mental wellness app! 🌿',
-            // url: 'https://your-app-link.com',
             failOnCancel: false,
         };
 
@@ -38,18 +34,12 @@ export default function SettingsScreen() {
                 ignoreSilentSwitch="obey"
             />
 
-            {/*<View style={styles.settingItem}>*/}
-            {/*    <View style={styles.iconLabel}>*/}
-            {/*        <Image source={require('../assets/img/Frame12.png')} />*/}
-            {/*        <Text style={styles.label}>Notifications</Text>*/}
-            {/*    </View>*/}
-            {/*    <Switch*/}
-            {/*        trackColor={{ false: '#767577', true: '#6d6dfd' }}*/}
-            {/*        thumbColor={notificationsEnabled ? '#ffffff' : '#f4f3f4'}*/}
-            {/*        onValueChange={toggleSwitch}*/}
-            {/*        value={notificationsEnabled}*/}
-            {/*    />*/}
-            {/*</View>*/}
+            <TouchableOpacity style={styles.settingItem} onPress={()=>{navigation.navigate('DeveloperInfoScreen')}}>
+                <View style={styles.iconLabel}>
+                    <Image source={require('../assets/img/Frame12-2.png')} />
+                    <Text style={styles.label}>Developer Info</Text>
+                </View>
+            </TouchableOpacity>
 
             <TouchableOpacity style={styles.settingItem} onPress={()=>{handleShare()}}>
                 <View style={styles.iconLabel}>
@@ -65,12 +55,6 @@ export default function SettingsScreen() {
                 </View>
             </TouchableOpacity>
 
-            {/*<TouchableOpacity style={styles.settingItem}>*/}
-            {/*    <View style={styles.iconLabel}>*/}
-            {/*        <Image source={require('../assets/img/Frame12-4.png')} />*/}
-            {/*        <Text style={styles.label}>Terms of Use / Privacy Policy</Text>*/}
-            {/*    </View>*/}
-            {/*</TouchableOpacity>*/}
         </View>
     );
 }

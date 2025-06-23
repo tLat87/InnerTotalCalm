@@ -2,91 +2,87 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import Video from 'react-native-video';
 
-export default function HomeScreen({navigation}) {
+export default function HomeScreen({ navigation }) {
+    const today = new Date().toLocaleDateString();
+
     return (
         <View style={styles.container}>
-
             <Video
                 source={require('../assets/fqwf.mov')}
                 style={StyleSheet.absoluteFill}
                 resizeMode="cover"
                 repeat
                 muted
-                rate={1.0}
-                ignoreSilentSwitch="obey"
-            />
-            <Image
-                source={require('../assets/img/homei.png')}
-                style={styles.topImage}
-                resizeMode="contain"
             />
 
-            {/*/!* Аватарка пользователя *!/*/}
-            {/*<View style={styles.avatarContainer}>*/}
-            {/*    <Image*/}
-            {/*        source={require('../assets/img/avatar.png')} // <-- сюда путь к аватарке*/}
-            {/*        style={styles.avatar}*/}
-            {/*    />*/}
-            {/*</View>*/}
+            <View style={styles.overlay} />
 
-            {/* Текст утверждения */}
-            <Text style={styles.title}>
-                I ALLOW MYSELF TO SLOW{'\n'}DOWN AND JUST BE
-            </Text>
+            <View style={styles.quoteBox}>
+                <Text style={styles.title}>
+                    “I ALLOW MYSELF TO SLOW{'\n'}DOWN AND JUST BE”
+                </Text>
+                <Text style={styles.dateText}>📅 {today}</Text>
+            </View>
 
-            {/* Today's Reflection */}
             <View style={styles.section}>
                 <Text style={styles.sectionTitle}>🌤 Today’s Reflection</Text>
-                <TouchableOpacity style={styles.button} onPress={()=>{navigation.navigate('CalendarScreen')}}>
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('CalendarScreen')}>
                     <Text style={styles.buttonText}>Add Today’s Reflection</Text>
                 </TouchableOpacity>
             </View>
 
-            {/* Meditation Space */}
             <View style={styles.section}>
                 <Text style={styles.sectionTitle}>🧘 Meditation Space</Text>
-                <TouchableOpacity style={styles.button} onPress={()=>{navigation.navigate('TimerScreen')}}>
+                <TouchableOpacity style={styles.buttonSecondary} onPress={() => navigation.navigate('TimerScreen')}>
                     <Text style={styles.buttonText}>Explore</Text>
                 </TouchableOpacity>
             </View>
 
+            <View style={styles.section}>
+                <Text style={styles.sectionTitle}>🌬 Breathing Exercise</Text>
+                <TouchableOpacity style={styles.buttonTertiary} onPress={() => navigation.navigate('BreathingScreen')}>
+                    <Text style={styles.buttonText}>Start</Text>
+                </TouchableOpacity>
+            </View>
+
+            <Text style={styles.reminderText}>🕊 Don’t forget to reflect today</Text>
         </View>
     );
 }
 
-// Стили
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#001453', // Тёмно-синий фон
-        padding: 20,
-        paddingTop: 100,
+        backgroundColor: '#1a1a2e',
+        paddingTop: 80,
+        paddingHorizontal: 20,
         alignItems: 'center',
+        justifyContent: 'flex-start',
     },
-    topImage: {
-        width: '100%',
-        height: 200,
-        marginBottom: 20,
+    overlay: {
+        ...StyleSheet.absoluteFillObject,
+        backgroundColor: 'rgba(0,0,0,0.45)',
     },
-    avatarContainer: {
-        position: 'absolute',
-        top: 180,
-        right: 20,
-        backgroundColor: '#1c1c50',
-        borderRadius: 30,
-        padding: 5,
-    },
-    avatar: {
-        width: 50,
-        height: 50,
-        borderRadius: 25,
+    quoteBox: {
+        backgroundColor: '#ffffff22',
+        padding: 24,
+        borderRadius: 20,
+        marginBottom: 30,
+        borderWidth: 1,
+        borderColor: '#ffffff33',
     },
     title: {
         fontSize: 20,
-        color: 'white',
+        color: '#fff',
         textAlign: 'center',
-        fontWeight: 'bold',
-        marginVertical: 30,
+        fontWeight: '600',
+        letterSpacing: 0.5,
+        marginBottom: 10,
+    },
+    dateText: {
+        fontSize: 14,
+        color: '#ddd',
+        textAlign: 'center',
     },
     section: {
         width: '100%',
@@ -94,19 +90,37 @@ const styles = StyleSheet.create({
     },
     sectionTitle: {
         fontSize: 16,
-        color: 'white',
+        color: '#eee',
         marginBottom: 10,
+        fontWeight: '500',
     },
     button: {
-        backgroundColor: '#d2b370', // Бежевый цвет кнопок
+        backgroundColor: '#ffc971',
+        borderRadius: 30,
+        paddingVertical: 15,
+        alignItems: 'center',
+    },
+    buttonSecondary: {
+        backgroundColor: '#a3d2ca',
+        borderRadius: 30,
+        paddingVertical: 15,
+        alignItems: 'center',
+    },
+    buttonTertiary: {
+        backgroundColor: '#f7a9a8',
         borderRadius: 30,
         paddingVertical: 15,
         alignItems: 'center',
     },
     buttonText: {
-        color: 'white',
+        color: '#2d2d2d',
         fontSize: 16,
-        fontWeight: '600',
+        fontWeight: 'bold',
+    },
+    reminderText: {
+        marginTop: 30,
+        fontSize: 14,
+        color: '#f1f1f1',
+        fontStyle: 'italic',
     },
 });
-

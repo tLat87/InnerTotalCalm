@@ -9,6 +9,8 @@ import InitialScreen from "./src/navigation/InitialScreen";
 import CreateEventScreen from "./src/screens/CreateEventScreen";
 import EventScreenDetails from "./src/screens/EventScreenDetails";
 import GameProccessScreen from "./src/screens/GameProccessScreen";
+import BreathingScreen from "./src/screens/BreathingScreen";
+import DeveloperInfoScreen from "./src/screens/DeveloperInfoScreen";
 const Stack = createStackNavigator();
 
 
@@ -27,6 +29,8 @@ export default function App() {
                         <Stack.Screen name="CreateEventScreen" component={CreateEventScreen} options={{ headerShown: false }} />
                         <Stack.Screen name="EventScreenDetails" component={EventScreenDetails} options={{ headerShown: false }} />
                         <Stack.Screen name="GameProccessScreen" component={GameProccessScreen} options={{ headerShown: false }} />
+                        <Stack.Screen name="BreathingScreen" component={BreathingScreen} options={{ headerShown: false }} />
+                        <Stack.Screen name="DeveloperInfoScreen" component={DeveloperInfoScreen} options={{ headerShown: false }} />
 
                     </Stack.Navigator>
                 </NavigationContainer>

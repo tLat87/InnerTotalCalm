@@ -1,8 +1,7 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import {Image, Settings, Text, TouchableOpacity, View} from 'react-native';
+import {Image} from 'react-native';
 import HomeScreen from '../screens/HomeScreen';
-import {useNavigation} from '@react-navigation/native';
 import TimerScreen from '../screens/TimerScreen';
 import CalendarScreen from '../screens/CalendarScreen';
 import SettingsScreen from '../screens/SettingsScreen';
@@ -10,7 +9,6 @@ import SettingsScreen from '../screens/SettingsScreen';
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
-    const navigation = useNavigation();
     return (
         <Tab.Navigator
             screenOptions={({ route }) => ({
@@ -69,16 +67,7 @@ const TabNavigator = () => {
                     },
                 }}
             />
-            {/*<Tab.Screen*/}
-            {/*    name="GameScreen"*/}
-            {/*    component={GameScreen}*/}
-            {/*    options={{*/}
-            {/*        tabBarLabel: '',*/}
-            {/*        tabBarIcon: ({ focused }) => {*/}
-            {/*            return <Image source={require('../assets/img/Frame-4.png')} />;*/}
-            {/*        },*/}
-            {/*    }}*/}
-            {/*/>*/}
+
             <Tab.Screen
                 name="SettingsScreen"
                 component={SettingsScreen}
@@ -89,6 +78,7 @@ const TabNavigator = () => {
                     },
                 }}
             />
+
 
 
         </Tab.Navigator>

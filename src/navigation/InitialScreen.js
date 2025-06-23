@@ -17,12 +17,11 @@ export default function InitialScreen({navigation}) {
             <View style={styles.illustration}>
                 <Image
                     source={require('../assets/img/Onboardingi.png')}
-                    // style={{ width: 300, height: 300 }}
                     resizeMode="contain"
                 />
             </View>
             <View style={styles.card}>
-                <Text style={styles.title}>WELCOME TO INNER TOTAL CALM</Text>
+                <Text style={styles.title}>WELCOME TO CALM</Text>
                 <Text style={styles.subtitle}>
                     This is your peaceful space —{'\n'}
                     to breathe, reflect, and reconnect with yourself.{'\n'}
@@ -31,7 +30,7 @@ export default function InitialScreen({navigation}) {
                 </Text>
 
                 <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('MainTab')}>
-                    <Text style={styles.buttonText}>Begin Your Calm Journey</Text>
+                    <Text style={styles.buttonText}>Begin Journey</Text>
                 </TouchableOpacity>
             </View>
         </View>
